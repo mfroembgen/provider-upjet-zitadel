@@ -4,7 +4,7 @@ metadata:
   name: provider-upjet-zitadel
   annotations:
     meta.crossplane.io/maintainer: Crossplane Contributors <info@crossplane.io>
-    meta.crossplane.io/source: github.com/crossplane-contrib/provider-upjet-zitadel
+    meta.crossplane.io/source: github.com/mfroembgen/provider-upjet-zitadel
     meta.crossplane.io/license: Apache-2.0
     meta.crossplane.io/description: The Zitadel Crossplane Provider based on Upjet framework.
     friendly-name.meta.crossplane.io: Provider Zitadel
