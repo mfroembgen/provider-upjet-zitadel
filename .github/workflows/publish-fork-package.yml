@@ -1,0 +1,26 @@
+name: Publish Fork Provider Package
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Semantic version for the fork package
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  publish:
+    uses: crossplane-contrib/provider-workflows/.github/workflows/publish-provider.yml@451c4dc6ad3691b0a702a997a0ac24e8bbc8bbaa
+    with:
+      repository: provider-upjet-zitadel
+      version: ${{ inputs.version }}
+      go-version: "1.26"
+      cleanup-disk: true
+      registry_org: mfroembgen
+      mirror: false
+    secrets:
+      GHCR_PAT: ${{ secrets.GITHUB_TOKEN }}
